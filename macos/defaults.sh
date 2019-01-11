@@ -103,14 +103,19 @@ defaults write com.apple.helpviewer DevMode -bool true
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window.
-# defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Set login window to show name and password
-# defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool true
+defaults write /Library/Preferences/com.apple.loginwindow SHOWFULLNAME -bool true
 
 # Disable automatic login
-# defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
-# rm /etc/kcpassword
+defaults delete /Library/Preferences/com.apple.loginwindow autoLoginUser
+rm /etc/kcpassword
+
+# Disable guest user
+defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
+defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool false
+defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool false
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false

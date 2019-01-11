@@ -26,7 +26,7 @@ sudo createhomedir -u elevadmin -c
 # https://www.jamf.com/jamf-nation/discussions/4332/how-to-change-local-user-account-picture-through-command-terminal
 # https://github.com/quedayone/jamf-pro-scripts/blob/master/user-picture-change
 
-sudo cp -r ~/.dotfiles/Elevation /Library/User\ Pictures/
+sudo cp -r ~/.dotfiles/macos/assets/ /Library/User\ Pictures/
 sudo dscl . delete /Users/elevadmin jpegphoto
 sudo dscl . delete /Users/elevadmin Picture
 sudo dscl . create /Users/elevadmin Picture "/Library/User Pictures/Elevation/Elevation_Avatar.png"
