@@ -72,3 +72,8 @@ alias cpu="sysctl -n machdep.cpu.brand_string"
 
 alias pbtext="pbpaste | textutil -convert txt -stdin -stdout -encoding 30 | pbcopy"
 alias pbspaces="pbpaste | expand | pbcopy"
+
+# Easy Update
+# OS X software updates, Homebrew, Ruby gems, NPM, etc
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update npm -g; sudo npm update -g; sudo gem update --system; sudo gem update'
+

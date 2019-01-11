@@ -45,8 +45,9 @@ unset LS_COLORS LS_TIMESTYLEISO LS_GROUPDIRSFIRST
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias -- -="cd -"                  # Go to previous dir with -
-alias cd.='cd $(readlink -f .)'    # Go to real dir (i.e. if current dir is linked)
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
 
 alias tree="tree -A"
 alias treed="tree -d"

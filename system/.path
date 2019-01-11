@@ -9,12 +9,14 @@ prepend-path "/bin"
 prepend-path "/usr/bin"
 prepend-path "/usr/local/bin"
 prepend-path "/usr/local/opt/coreutils/libexec/gnubin"
+prepend-path "/usr/local/opt/make/libexec/gnubin"
 prepend-path "/usr/local/opt/ruby/bin"
 prepend-path "$DOTFILES_DIR/bin"
 prepend-path "$HOME/bin"
 prepend-path "/sbin"
 prepend-path "/usr/sbin"
 prepend-path "/usr/local/sbin"
+prepend-path "$HOME/.composer/vendor/bin"
 
 # Remove duplicates (preserving prepended items)
 # Source: http://unix.stackexchange.com/a/40755

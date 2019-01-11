@@ -1,29 +1,29 @@
-tap "goles/battery"
+# Sources
 tap "homebrew/bundle"
 tap "homebrew/core"
 
 brew "bats"
 brew "coreutils"
-brew "diff-so-fancy"
-brew "dockutil"
-brew "fasd"
-brew "ffmpeg"
-brew "gnu-sed", args: ["with-default-names"]
-brew "goles/battery/battery"
-brew "grep", args: ["--with-default-names"]
-brew "httpie"
-brew "hub"
-brew "imagemagick"
-brew "jq"
-brew "lynx"
-brew "mackup"
-brew "nano"
-brew "pandoc"
-brew "peco"
-brew "psgrep"
-brew "python"
-brew "python@2"
-brew "shellcheck"
-brew "ssh-copy-id"
+
+# Utilities
 brew "stow"
 brew "tree"
+# brew "mackup"
+brew "make"
+brew "composer"
+brew "mas"
+brew "php"
+brew "yarn", args: ["without-node"]
+brew "coda-cli"
+brew "wp-cli"
+brew "mariadb"
+brew "exiftool"
+brew "libdvdcss"
+# ffmpeg, args: ["with-libvpx"]
+# imagemagick , args: ["with-webp"]
+# wget
+# hub
+# hugo
+# tig
+# asciinema
+# rbenv
