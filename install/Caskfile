@@ -4,64 +4,54 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 # Apps from "Web"
-cask "1password"
+cask "abstract"
 cask "adobe-creative-cloud"
 cask "alfred"
-cask "imageoptim"
-cask "imagealpha"
-cask "dropbox"
-cask "opera"
-cask "firefox"
-# cask "google-chrome"
-
-
-cask "sequel-pro"
-
-cask "abstract"
 cask "astropad"
-
-
-cask "sketch"
-cask "visual-studio-code"
-cask "virtualbox"
-
-
-cask "homebrew/cask-versions/safari-technology-preview"
+cask "coda"
+cask "codekit"
+cask "dropbox"
 cask "firefox-developer-edition"
+cask "firefox"
 cask "google-chrome-canary"
-
-# cask "coda"
-cask "sketchpacks"
+cask "google-chrome"
 cask "hazel"
+cask "homebrew/cask-versions/safari-technology-preview"
+cask "imagealpha"
+cask "imageoptim"
+cask "opera"
+cask "sequel-pro"
+cask "sketch"
+cask "sketch-beta"
+cask "sketchpacks"
 cask "skyfonts"
 cask "thingsmacsandboxhelper"
-cask "sequel-pro"
 cask "tower"
-cask "codekit"
-
+cask "virtualbox"
+cask "visual-studio-code"
+# cask "1password"
 # cask "iterm2
 # cask "sip"
 # cask "slack"
 # cask "transmit"
 # cask "vlc"
-# craftmanager
-# kap
-# blisk
-# dash
-# docker
-# expressvpn
-# renamer
-# rocket
-# torbrowser
-# vagrant
-# vlc
-# slack
-# vagrant-manager 
-# handbrake
-# sketch-beta
-# local-by-flywheel
-# plex-media-server
-# colorpicker-skalacolor
+# cask blisk
+# cask craftmanager
+# cask dash
+# cask docker
+# cask expressvpn
+# cask handbrake
+# cask kap
+# cask local-by-flywheel
+# cask plex-media-server
+# cask renamer
+# cask rocket
+# cask slack
+# cask torbrowser
+# cask vagrant
+# cask vagrant-manager 
+# cask vlc
+# cask colorpicker-skalacolor
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 cask "qlcolorcode"

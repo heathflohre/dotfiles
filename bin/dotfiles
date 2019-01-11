@@ -9,6 +9,7 @@ sub_help () {
   echo
   echo "Commands:"
   echo "   clean            Clean up caches (brew, nvm, gem)"
+  echo "   link             Update symbolic links"
   echo "   dock             Apply macOS Dock settings"
   echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE) and Git GUI ($DOTFILES_GIT_GUI)"
   echo "   help             This help message"
@@ -28,12 +29,12 @@ sub_test () {
 
 sub_update () {
   sudo softwareupdate -i -a
+  brew cask upgrade
   brew update
   brew upgrade
-  npm install npm -g
-  npm update -g
-  gem update --system
-  gem update
+  brew cleanup
+  sudo npm update npm -g
+  sudo npm update -g
 }
 
 sub_clean () {
@@ -51,6 +52,13 @@ sub_macos () {
 
 sub_dock () {
   . "${DOTFILES_DIR}/macos/dock.sh" && echo "Dock reloaded."
+}
+
+sub_link () {
+  # for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then mv -v $(HOME)/$$FILE{,.bak}; fi; done
+	stow -d $DOTFILES_DIR -t $HOME runcom
+	stow -d $DOTFILES_DIR -t $XDG_CONFIG_HOME config
+	echo "Symlinks have been updated."
 }
 
 case $COMMAND_NAME in
