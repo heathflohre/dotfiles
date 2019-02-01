@@ -41,3 +41,16 @@ sudo dscl . create /Users/elevadmin IsHidden 1
 sudo mv /Users/elevadmin /var/elevadmin
 sudo dscl . create /Users/elevadmin NFSHomeDirectory /var/elevadmin
 sudo dscl . delete "/SharePoints/Elevation Admin's Public Folder"
+
+
+###############################################################################
+# Set screen saver
+###############################################################################
+# http://krypted.com/mac-security/mac-setting-screen-saver-from-the-cli/
+# https://apple.stackexchange.com/questions/159992/how-to-change-the-the-screensaver-using-terminal-without-using-preference-panel
+
+curl -O -J -L https://github.com/pedrommcarrasco/Brooklyn/releases/download/1.0.0/Brooklyn.saver.zip
+unzip -q Brooklyn.saver.zip
+sudo mv ~/Brooklyn.saver /Library/Screen\ Savers/Brooklyn.saver
+rm "Brooklyn.saver.zip" && rmdir "__MACOSX"
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Brooklyn path /Library/Screen\ Savers/Brooklyn.saver type 0
