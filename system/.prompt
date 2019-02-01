@@ -21,6 +21,7 @@ git_branch() {
 clear_attributes="\[$(tput sgr0)\]"
 
 # Custom bash prompt - "➜  ~ (master) "
+# https://github.com/dracula/terminal-app/blob/master/Dracula.terminal
 # http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html
 export PS1="${titlebar}${green}➜  ${blue}\W ${cyan}\$(git_branch)${clear_attributes}"
 export CLICOLOR=1
